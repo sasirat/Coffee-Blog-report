@@ -5,7 +5,7 @@
 \fi
 }
 
-ในบทนี้จะกล่าวถึงหลักการ และการออกแบบระบบ
+ในบทนี้จะกล่าวถึงหลักการทำงาน และการออกแบบระบบของการเขียนบทความและการรีวิวกาแฟ
 
 \makeatletter
 
@@ -19,79 +19,49 @@
 % \titleformat{\section}{\normalfont\bfseries}{\thesection}{1em}{}
 % \titlespacing*{\section}{0pt}{10ex}{0pt}
 
-\section{Alice in Wonderland}
+\section{การใช้งานของระบบ}
+Usecase diagram ซึ่งเป็นการแสดงภาพรวมของการใช้งานของระบบ โดยจะแบ่งผู้ใช้งานเป็นสองกลุ่มคือ กลุ่มผู้เขียนบทความและรีวิว และกลุ่มผู้อ่านบทความ ซึ่งผู้ใช้ทั้งสองฝั่งจะใช้งานผ่านเว็บไซต์ Coffee blog 
 
-\begin{figure}
+\begin{figure}[h]
 \begin{center}
-\includegraphics{800px-Briny_Beach.jpg}
+\includegraphics[width=6cm, height=8cm]{usecase-diagram.jpg}
 \end{center}
-\caption[Poem]{The Walrus and the Carpenter}
-\label{fig:walrus}
+\caption[Poem]{usecase diagram ของระบบ}
 \end{figure}
 
-\subsection{The Black Kitten}
-  One thing was certain, that the WHITE kitten had had nothing to
-do with it:---it was the black kitten's fault entirely~\cite{aiw}.  For the
-white kitten had been having its face washed by the old cat for
-the last quarter of an hour (and bearing it pretty well,
-considering); so you see that it COULDN'T have had any hand in
-the mischief.
+การใช้งานของระบบจะมีการทำงานดังตัวอย่างต่อไปนี้ \\ 
+Use case 1 \\ 
+Usecase Title : การเขียนบทความ\\
+Primary Actor : ผู้เขียนบทความ\\
+Stakeholder Actor : ผู้อ่านบทความ\\
+Main Flow : ผู้ใช้ทั้งสองฝั่งเข้าสู่ระบบด้วย Google account ผู้ที่เขียนบทความเข้าไปเขียนบทความในหน้าบทความ และกดโพสต์บทความเพื่อทำการสร้างบทความ และเลือก tag สำหรับบทความเพื่อให้ผู้ที่เข้ามาอ่านสามารถค้นหาบทความได้ง่ายขึ้น\\
+Exceptional Flow : เมื่อเขียนบทความเสร็จ ผู้อ่านจะสามารถเข้ามาอ่านได้ ยอดการเข้าอ่านบทความจะเพิ่มขึ้น\\
+Use case 2
+Usecase Title : การอ่านบทความ\\
+Primary Actor : ผู้อ่านบทความ\\
+ Stakeholder Actor : ผู้เขียนบทความ\\
+Main Flow : ผู้ใช้ทั้งสองฝั่งเข้าสู่ระบบด้วย Google account ในหน้าแรกผู้ใช้สามารถค้นหา keyword ที่ต้องการเข้าไปอ่านได้ ถ้าผู้ใช้ชอบบทความที่เข้าไปอ่านผู้ใช้สามารถ like บทความ และ save ไว้อ่านทีหลังได้\\
+ Exceptional Flow : เมื่อกด save บทความผู้ใช้จะสามารถเข้าไปดูบทความที่ save ได้\\
+Use case 3\\
+Usecase Title : การเขียนรีวิว\\
+Primary Actor : ผู้เขียนรีวิว\\
+ Stakeholder Actor : ผู้อ่านรีวิว\\
+Main Flow : ผู้ที่ต้องการเขียนรีวิว จะถ่ายรูปกาแฟ หรือถุงกาแฟที่ตนเองต้องการรีวิว และอัพโหลดไปที่เว็บไซต์ เขียนรายระเอียดเกี่ยวกับกาแฟ และเลือกสีที่ต้องการ \\
+ Exceptional Flow : เมื่อเขียนรีวิวเสร็จ ผลลัพธ์ที่ได้จะได้เป็นหน้าแสดงผล เช่นกราฟ และสรุปของสี ที่เกี่ยวกับกาแฟ\\
 
-  The way Dinah washed her children's faces was this:  first she
-held the poor thing down by its ear with one paw, and then with
-the other paw she rubbed its face all over, the wrong way,
-beginning at the nose:  and just now, as I said, she was hard at
-work on the white kitten, which was lying quite still and trying
-to purr---no doubt feeling that it was all meant for its good.
-
-  But the black kitten had been finished with earlier in the
-afternoon, and so, while Alice was sitting curled up in a corner
-of the great arm-chair, half talking to herself and half asleep,
-the kitten had been having a grand game of romps with the ball of
-worsted Alice had been trying to wind up, and had been rolling it
-up and down till it had all come undone again; and there it was,
-spread over the hearth-rug, all knots and tangles, with the
-kitten running after its own tail in the middle.
-
-\subsection{The Reproach}
-
-  `Oh, you wicked little thing!' cried Alice, catching up the
-kitten, and giving it a little kiss to make it understand that it
-was in disgrace.  `Really, Dinah ought to have taught you better
-manners!  You OUGHT, Dinah, you know you ought!' she added,
-looking reproachfully at the old cat, and speaking in as cross a
-voice as she could manage---and then she scrambled back into the
-arm-chair, taking the kitten and the worsted with her, and began
-winding up the ball again.  But she didn't get on very fast, as
-she was talking all the time, sometimes to the kitten, and
-sometimes to herself.  Kitty sat very demurely on her knee,
-pretending to watch the progress of the winding, and now and then
-putting out one paw and gently touching the ball, as if it would
-be glad to help, if it might.
-
-  `Do you know what to-morrow is, Kitty?' Alice began.  `You'd
-have guessed if you'd been up in the window with me---only Dinah
-was making you tidy, so you couldn't.  I was watching the boys
-getting in stick for the bonfire---and it wants plenty of
-sticks, Kitty!  Only it got so cold, and it snowed so, they had
-to leave off.  Never mind, Kitty, we'll go and see the bonfire
-to-morrow.'  Here Alice wound two or three turns of the worsted
-round the kitten's neck, just to see how it would look:  this led
-to a scramble, in which the ball rolled down upon the floor, and
-yards and yards of it got unwound again.
-
-  `Do you know, I was so angry, Kitty,' Alice went on as soon as
-they were comfortably settled again, `when I saw all the mischief
-you had been doing, I was very nearly opening the window, and
-putting you out into the snow!  And you'd have deserved it, you
-little mischievous darling!  What have you got to say for
-yourself?  Now don't interrupt me!' she went on, holding up one
-finger.  `I'm going to tell you all your faults.  Number one:
-you squeaked twice while Dinah was washing your face this
-morning.  Now you can't deny it, Kitty:  I heard you!  What that
-you say?' (pretending that the kitten was speaking.)  `Her paw
-went into your eye?  Well, that's YOUR fault, for keeping your
-eyes open---if you'd shut them tight up, it wouldn't have
-happened.  Now don't make any more excuses, but listen!  Number
-two:  you pulled Snowdrop away by the tail just as I had put down
-the saucer of milk before her!  What, you were thirsty, were you?
+ \section{โครงสร้างของระบบ}
+ โดยภาพรวมของระบบจะเป็นดังภาพ ซึ่งในส่วนของผู้ใช้ หรือ client จะใช้ react nect.js ในการพัฒนา และมีตัวกลางในการติดต่อเรียกใช้ข้อมูลระหว่าง server กับ client คือ graphql และในส่วนของ server จะใช้ nodejs ในการพัฒนา ฐานข้อมูล จะมีสองส่วน คือ elasticsearch จะทำในส่วนของการเก็บข้อมูลที่ใช้ในการ search และ mongoDB ที่จะเก็บข้อมูลต่างๆ
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=10cm, height=8cm]{database.jpg}
+\end{center}
+\caption[Poem]{Architecture ของระบบ}
+\end{figure}
+หลักการทำงานของระบบ
+\begin{enumerate}
+  \item ผู้ใช้สามารถเข้าเว็บไซต์ได้จากสมาร์ทโฟน แท็บเล็ต หรือคอมพิวเตอร์
+  \item เมื่อผู้ใช้ต้องการค้นหาบทความจะเรียกของมูลมาจาก elasticsearch โดยใช้ graphql เป็นตัวกลางในการเรียกใช้ข้อมูล
+  \item เมื่อผู้ใช้ต้องการเขียนบทความหรือเขียนรีวิว ข้อมูลจะอัพเดตและเก็บไว้ใน MongoDB 
+  \item การทำงานของผู้ใช้ทั้งหมดจะสามารถใช้งานบนเว็บไซต์ทั้งหมด
+\end{enumerate}
+สาเหตุที่ทำเว็บไซต์เพื่อให้ผู้ใช้สามารถเข้าถึงได้ในอุปกรณ์ต่างๆ และมีความง่ายต่อการพัฒนา
